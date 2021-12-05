@@ -1,0 +1,84 @@
+
+
+// intro and email sign up background
+$DarkBlue1: hsl(217, 28%, 15%);
+@mixin bg-1 {
+    background-color: $DarkBlue1;
+}
+// main background
+$DarkBlue2: hsl(218, 28%, 13%);
+@mixin bg-2 {
+    background-color: $DarkBlue2;
+}
+// (footer background)
+$DarkBlue3: hsl(216, 53%, 9%);
+@mixin bg-3 {
+    background-color: $DarkBlue3;
+}
+// (testimonials background)
+$DarkBlue4: hsl(219, 30%, 18%);
+@mixin bg-4 {
+    background-color: $DarkBlue4;
+}
+
+// (inside call-to-action gradient)
+$Cyan : hsl(176, 68%, 64%);
+// (inside call-to-action gradient)
+$Blue : hsl(198, 60%, 50%);
+// Red (error)
+$Light : hsl(0, 100%, 63%);
+@mixin c-error {
+    color: $Light;
+}
+// ### Neutral
+
+$White: hsl(0, 0%, 100%);
+@mixin c-w {
+    color: $White;
+}
+
+:root{
+    font-size: 14px;
+}
+@mixin b {
+    border: 1px solid red;
+}
+
+// ### Headings, Call-to-actions, Header Navigation
+// - Family: [Raleway](https://fonts.google.com/specimen/Raleway)
+// - Weights: 400, 700
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+// font-family: 'Raleway', sans-serif;
+
+@mixin  f1-400 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+@mixin  f1-700 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+
+// ### Body
+// - Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+// - Weights: 400, 700
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+// font-family: 'Open Sans', sans-serif;
+
+@mixin  f2-400 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+@mixin  f2-700 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+
+// media-Q----------------
+@mixin  min-1000 {
+    @media only screen and (min-width:1000px) {
+        @content
+    }
+}

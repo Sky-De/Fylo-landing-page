@@ -1,0 +1,71 @@
+@import 'utli';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img,picture{
+    display: block;
+    width: 100%;
+}
+
+body{
+    position: relative;
+    width: 100%;
+}
+
+.template{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    // opacity: 0.9;
+    opacity: 0.3;
+    // display: none;
+}
+
+
+.header{
+    @include bg-1;
+    padding: 0 1.75rem 0 1.35rem;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include min-1000{
+        height: 14.278rem;
+        padding: 0 5.75rem;
+    }
+
+    &__logo{
+        img{
+            width: 5.8rem;
+            transform: translateY(1px);
+            @include min-1000{
+            width: 12.5rem;
+            transform: translateY(-1px);
+            }
+        }
+    }
+
+    &__nav{
+        @include f1-400;
+        &__list{
+            width: 100%;
+            list-style: none;
+            display: flex;
+        }
+        &__link{
+            @include c-w;
+            text-decoration: none;
+            font-size: 0.85rem;
+            margin: 0 0 0 1.8rem;
+            @include min-1000{
+            font-size: 1.1rem;
+            margin: 0 0 0 4.28rem;
+            }
+        }
+
+    }
+    
+}
