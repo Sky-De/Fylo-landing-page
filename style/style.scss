@@ -19,12 +19,35 @@ body{
     width: 100%;
     top: 0;
     left: 0;
+    opacity: 0.4;
     // opacity: 0.9;
-    opacity: 0.3;
     // display: none;
 }
 
+// btn----start---
+.btn__start{
+    display: grid;
+    place-items: center;
+    color: $White;
+    text-decoration: none;
+    display:grid;
+    width: 17.2rem;
+    height: 3.46rem;
+    border-radius: 2rem;
+    @include f1-700;
+    letter-spacing: 0.5px;
+    background: linear-gradient(to right,$Cyan,$Blue);
+    cursor: pointer;
+    font-size: 0.95rem;
+    @include min-1000{
+        width: 20rem;
+        height: 4rem;
+        font-size: 1.15rem;
+        letter-spacing: 0;
+    }
+}
 
+// HEADER---------------------------------------
 .header{
     @include bg-1;
     padding: 0 1.75rem 0 1.35rem;
@@ -68,4 +91,84 @@ body{
 
     }
     
+}
+
+// MAIN------------------------------------------
+.main{
+    @include bg-2;
+    color: $White;
+    
+    &__intro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        row-gap: 0.5rem;        
+        @include min-1000{
+        padding-bottom: 6.5rem;
+        background: url(./img/bg-curvy-desktop.svg) no-repeat 0 105%,
+        $DarkBlue1;
+        }
+        
+        &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1.2rem;
+        transform: translateY(-5.2rem);
+        @include min-1000{
+            row-gap: 2.4rem;
+        }
+        }
+
+
+        &__photo{
+        width: 100%;
+        padding-bottom: 5.2rem;
+        background: url(./img/bg-curvy-mobile.svg) no-repeat bottom center,
+        $DarkBlue1;
+
+        img{
+        transform: scale(0.81);
+        }
+
+        @include min-1000{
+            display: flex;
+            justify-content: center;
+            background: none;
+            padding-bottom: 7.4rem;
+            img{
+            transform: scale(1);
+            width: 50%;
+            }
+        }
+        }
+
+        &__title{
+        @include f1-700;
+        font-size: 1.72rem;
+        padding: 0 0.8rem;
+        line-height: 2.5rem;   
+        @include min-1000{
+        width: 55rem;
+        font-size: 2.87rem;
+        line-height: 4.2rem;
+        }   
+    }
+        &__p{
+        @include f1-400;
+        padding: 0 2.9rem;
+        line-height: 1.5rem;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        @include f2-400;
+        @include min-1000{
+            padding: 0 3.5rem;
+            width: 51.5rem;
+            font-size: 1.43rem;
+            line-height: 2.1rem;
+            margin-bottom: 0rem;
+        }
+    }
+    }
 }

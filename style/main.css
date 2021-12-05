@@ -25,7 +25,32 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  opacity: 0.3;
+  opacity: 0.4;
+}
+
+.btn__start {
+  display: grid;
+  place-items: center;
+  color: white;
+  text-decoration: none;
+  display: grid;
+  width: 17.2rem;
+  height: 3.46rem;
+  border-radius: 2rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: linear-gradient(to right, #65e2d9, #339ecc);
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+@media only screen and (min-width: 1000px) {
+  .btn__start {
+    width: 20rem;
+    height: 4rem;
+    font-size: 1.15rem;
+    letter-spacing: 0;
+  }
 }
 
 .header {
@@ -71,6 +96,89 @@ body {
   .header__nav__link {
     font-size: 1.1rem;
     margin: 0 0 0 4.28rem;
+  }
+}
+
+.main {
+  background-color: #181f2a;
+  color: white;
+}
+.main__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  row-gap: 0.5rem;
+}
+@media only screen and (min-width: 1000px) {
+  .main__intro {
+    padding-bottom: 6.5rem;
+    background: url(./img/bg-curvy-desktop.svg) no-repeat 0 105%, #1c2431;
+  }
+}
+.main__intro__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.2rem;
+  transform: translateY(-5.2rem);
+}
+@media only screen and (min-width: 1000px) {
+  .main__intro__content {
+    row-gap: 2.4rem;
+  }
+}
+.main__intro__photo {
+  width: 100%;
+  padding-bottom: 5.2rem;
+  background: url(./img/bg-curvy-mobile.svg) no-repeat bottom center, #1c2431;
+}
+.main__intro__photo img {
+  transform: scale(0.81);
+}
+@media only screen and (min-width: 1000px) {
+  .main__intro__photo {
+    display: flex;
+    justify-content: center;
+    background: none;
+    padding-bottom: 7.4rem;
+  }
+  .main__intro__photo img {
+    transform: scale(1);
+    width: 50%;
+  }
+}
+.main__intro__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1.72rem;
+  padding: 0 0.8rem;
+  line-height: 2.5rem;
+}
+@media only screen and (min-width: 1000px) {
+  .main__intro__title {
+    width: 55rem;
+    font-size: 2.87rem;
+    line-height: 4.2rem;
+  }
+}
+.main__intro__p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  padding: 0 2.9rem;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+@media only screen and (min-width: 1000px) {
+  .main__intro__p {
+    padding: 0 3.5rem;
+    width: 51.5rem;
+    font-size: 1.43rem;
+    line-height: 2.1rem;
+    margin-bottom: 0rem;
   }
 }
 
