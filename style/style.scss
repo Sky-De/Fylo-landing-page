@@ -97,7 +97,7 @@ body{
 .main{
     @include bg-2;
     color: $White;
-    
+    // INTRO-----------------------------------------
     &__intro{
         display: flex;
         flex-direction: column;
@@ -171,4 +171,96 @@ body{
         }
     }
     }
+
+    // ADVANTAGES--------------------------------------
+    &__advantages{
+        padding: 2.75rem 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,1fr);
+        row-gap: 3.9rem;
+        @include min-1000{
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2,1fr);
+            justify-items: center;
+            justify-content: center;
+            padding: 0 14.5rem;
+            row-gap: 4.5rem;
+        }
+       
+    }
+
+    .iconCon{
+        width: 100px;
+        height: 100px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 0.97rem;
+
+    }
+
+    // becuase of defrent sizes of icons / needs to asign any one of them singluarly
+    .icon1{
+        width: 4.7rem;
+        @include min-1000{
+            width: 6rem;
+        }
+    }
+    .icon2{
+        width: 4rem;
+        @include min-1000{
+            width: 5rem;
+            justify-self: flex-start;
+        }
+    }
+    .icon3{
+        width: 4.7rem;
+        @include min-1000{
+            width: 6.3rem;
+        }
+
+    }
+    .icon4{
+        width: 5rem;
+        @include min-1000{
+            width: 6.5rem;
+        }
+    }
+    
+
+    .adv__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 2rem;
+        @include min-1000{
+            max-width: 418px;
+            padding-top: 0.1rem;
+        }
+        
+        &__photo{
+            display: block;
+        }
+        
+
+        &__title{
+            @include f1-700;
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            @include min-1000{
+                font-size: 1.4rem;
+            }
+        }
+
+        &__p{
+            @include f2-400;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            margin-bottom: 1.2rem;
+        }
+    }
+
+
 }
+
